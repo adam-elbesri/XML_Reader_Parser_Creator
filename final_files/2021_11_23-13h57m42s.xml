@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fichierGlobal [
+<!ELEMENT fichierGlobal (destinataire+,expediteur,nbMessages,message+)>
+<!ATTLIST fichierGlobal id ID #REQUIRED>
+<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT expediteur (#PCDATA)>
+<!ELEMENT nbMessages (#PCDATA)>
+<!ELEMENT message (dateEnvoi,dureeValidite,typeMessage)>
+<!ATTLIST message id ID #REQUIRED>
+<!-- Nomenclature dateEnvoi : hh:mm:ss JJ-MM-AAAA -->
+<!ELEMENT dateEnvoi (#PCDATA)>
+<!-- Nomenclature dureeValidite : nombre entier : nombres d'heures -->
+<!ELEMENT dureeValidite (#PCDATA)>
+<!ELEMENT typeMessage (
+    reponseGenerique |  
+    demandeConference | 
+    reponseConference | 
+    demandeListeFormation | 
+    reponseListeFormation | 
+    demandeStage | 
+    reponseStage)>
+<!-- Réponse Générique -->
+<!ELEMENT reponseGenerique (msg, idMsgPrécédent)>
+<!ELEMENT msg (#PCDATA)>
+<!ELEMENT idMsgPrécédent (#PCDATA)>
+
+
+<!-- Demande de conférence -->
+<!ELEMENT demandeConference (conf+)>
+<!ELEMENT conf (id,sujet,lieu,date,dureeConference)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT sujet (#PCDATA)>
+<!ELEMENT lieu (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+<!-- dureeConference en heure -->
+<!ELEMENT dureeConference (#PCDATA)>
+
+<!-- Réponse de conférence -->
+<!ELEMENT reponseConference (reponseGenerique)>
+
+<!-- Demande de listes de formations -->
+<!ELEMENT demandeListeFormation (form+)>
+<!ELEMENT form (id,branche)>
+<!ELEMENT branche (filliere+)>
+<!ELEMENT filliere (#PCDATA)>
+
+<!-- Reponse de listes de formations -->
+<!ELEMENT reponseListeFormation (catalogue+)>
+<!ELEMENT catalogue (id,liste)>
+<!ELEMENT liste (formation+)>
+<!ELEMENT formation (titre,description,filiere)>
+<!ELEMENT titre (#PCDATA)>
+
+<!-- Demande de stage -->
+<!ELEMENT demandeStage (dmStage+)>
+<!ELEMENT dmStage (id,objet,description,lieu,remuneration,date)>
+<!ELEMENT date_de_stage (dateDebut, (dateFin | duree))>
+<!-- Nomenclature dateDebut : hh:mm:ss JJ-MM-AAAA -->
+<!ELEMENT dateDebut (#PCDATA)>
+<!ELEMENT dateFin (#PCDATA)>
+<!-- Nomenclature duree : nombre entier : nombres de jours -->
+<!ELEMENT duree (#PCDATA)>
+<!ELEMENT objet (#PCDATA)>
+<!ELEMENT remuneration (#PCDATA)>
+
+<!-- Réponse de stage -->
+<!ELEMENT reponseStage (rpStage+)>
+<!ELEMENT rpStage (id,objet,cv,lettre)>
+<!ELEMENT cv (etatcivil,formationStage+,experience*)>
+<!ELEMENT lettre (etatcivil,description)>
+<!ELEMENT etatcivil (nom,prenom,dateNaissance,lieuNaissance,lieuResidence,photo?,email?,tel?)>
+<!ELEMENT formationStage (titre,date,lieu?,mention?,description?)>
+<!ELEMENT experience (titre,date,lieu,fonction?,description?)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT dateNaissance (#PCDATA)>
+<!ELEMENT lieuNaissance (#PCDATA)>
+<!ELEMENT lieuResidence (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT mention (#PCDATA)>
+<!ELEMENT fonction (#PCDATA)>
+
+]><fichierGlobal id="ID20211123135844"><destinataire>
+Entreprise
+</destinataire>
+<expediteur> EDF </expediteur>
+<message id="12">
+<dateEnvoi>23-11-2021 </dateEnvoi>
+<dureeValidite>12 </dureeValidite>
+<typeMessage>
+<reponseConference>
+<reponseGenerique>
+<idMsgPrecedent>
+23
+</idMsgPrecedent>
+<msg>
+Oui
+</msg>
+</reponseGenerique>
+</reponseConference>
+</typeMessage>
+</message>
+
+<nbMessages>1</nbMessages>
+</fichierGlobal>

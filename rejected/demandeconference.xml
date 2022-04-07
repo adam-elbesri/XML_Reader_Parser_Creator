@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<demandeConference>
+ <conf>
+  <id>111</id>
+  <sujet> Intelligence Artificielle </sujet>
+  <lieu>Manufacture</lieu>
+  <date> 11 novembre  </date>
+  <dureeConference>3h30</dureeConference>
+ </conf>
+ <conf>
+  <id>78</id>
+  <sujet>Machine Learning</sujet>
+  <lieu>Zenith de St Etienne</lieu>
+  <date>3 décembre</date>
+  <dureeConference>2h30</dureeConference>
+ </conf>
+ 
+</demandeConference>

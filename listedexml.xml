@@ -1,0 +1,75 @@
+/*$myXMLData1 =
+"<?xml version='1.0' encoding='UTF-8'?>
+<demandeConference>
+ <conf>
+  <id>William T. Strauss</id>
+  <sujet>COVID </sujet>
+  <lieu>Manufacture</lieu>
+  <date>3 NOVEMBRE </date>
+  <dureeConference>3h</dureeConference>
+ </conf>
+ <conf>
+  <id>David N. Bateman</id>
+  <sujet>Ecologie</sujet>
+  <lieu>Tréfilerie</lieu>
+  <date>4 janvier</date>
+  <dureeConference>2h</dureeConference>
+ </conf>
+ 
+</demandeConference>";
+
+$myXMLData2 =
+"<?xml version='1.0' encoding='UTF-8'?>
+<demandeStage>
+ <stage>
+  <id>William T. Strauss</id>
+  <objet>COVID </objet>
+  <description>Manufacture</description>
+  <lieu>3 NOVEMBRE </lieu>
+  <remuneration>3h</remuneration>
+  <datedebut>31 DECEMBRE </datedebut>
+  <datefin>2 FEVRIER</datefin>
+ </stage>
+ <stage>
+  <id>David N. Bateman</id>
+  <objet>Ecologie</objet>
+  <description>Tréfilerie</description>
+  <lieu>4 janvier</lieu>
+  <remuneration>2h</remuneration>
+   <datedebut>31 DECEMBRE </datedebut>
+  <datefin>2 FEVRIER</datefin>
+ </stage>
+ 
+</demandeStage>";
+
+$myXMLData3 =
+"<?xml version='1.0' encoding='UTF-8'?>
+<demandeListeFormation>
+ <form>
+  <id>William T. Strauss</id>
+  <branche>COVID </branche>
+  <filliere>Manufacture</filliere>
+ </form>
+ <form>
+  <id>David N. Bateman</id>
+  <branche>Ecologie</branche>
+  <filliere>Tréfilerie</filliere>
+ </form>
+ 
+</demandeListeFormation>";
+
+
+$myXMLData4=
+"<?xml version='1.0' encoding='UTF-8'?>
+<reponseConference>
+ <conf>
+  <id>William T. Strauss</id>
+  <reponse>COVID </reponse>
+ </conf>
+ <conf>
+  <id>David N. Bateman</id>
+  <reponse>Ecologie</reponse>
+ </conf>
+ 
+</reponseConference>";
+*/

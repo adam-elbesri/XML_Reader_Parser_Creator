@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<demandeStage>
+ <stage>
+  <id>45006</id>
+  <objet>Offre de stage chez UJM</objet>
+  <description>Dev Web</description>
+  <lieu>Laboratoire Hubert Curien </lieu>
+  <remuneration>500 euros</remuneration>
+  <datedebut>31 mai </datedebut>
+  <datefin>06 juillet</datefin>
+ </stage>
+ <stage>
+  <id>887475</id>
+  <objet>Offre de stage chez Sam Outillage</objet>
+  <description>Gestion de base de données</description>
+  <lieu> Siege social de Sam outillage</lieu>
+  <remuneration>600 euros</remuneration>
+   <datedebut>3 mars </datedebut>
+  <datefin>2 avril</datefin>
+ </stage>
+ 
+</demandeStage>

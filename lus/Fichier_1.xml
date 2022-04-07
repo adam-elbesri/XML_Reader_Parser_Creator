@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fichierGlobal [
+<!ELEMENT fichierGlobal (destinataire+,expediteur,nbMessages,message+)>
+<!ATTLIST fichierGlobal id ID #REQUIRED>
+<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT expediteur (#PCDATA)>
+<!ELEMENT nbMessages (#PCDATA)>
+<!ELEMENT message (dateEnvoi,dureeValidite,typeMessage)>
+<!ATTLIST message id ID #REQUIRED>
+<!-- Nomenclature dateEnvoi : hh:mm:ss JJ-MM-AAAA -->
+<!ELEMENT dateEnvoi (#PCDATA)>
+<!-- Nomenclature dureeValidite : nombre entier : nombres d'heures -->
+<!ELEMENT dureeValidite (#PCDATA)>
+<!ELEMENT typeMessage (
+    reponseGenerique |  
+    demandeConference | 
+    reponseConference | 
+    demandeListeFormation | 
+    reponseListeFormation | 
+    demandeStage | 
+    reponseStage)>
+<!-- Réponse Générique -->
+<!ELEMENT reponseGenerique (msg, idMsgPrecedent)>
+<!ELEMENT msg (#PCDATA)>
+<!ELEMENT idMsgPrecedent (#PCDATA)>
+
+
+<!-- Demande de conférence -->
+<!ELEMENT demandeConference (conf+)>
+<!ELEMENT conf (id,sujet,lieu,date,dureeConference)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT sujet (#PCDATA)>
+<!ELEMENT lieu (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+<!-- dureeConference en heure -->
+<!ELEMENT dureeConference (#PCDATA)>
+
+<!-- Réponse de conférence -->
+<!ELEMENT reponseConference (reponseGenerique)>
+
+<!-- Demande de listes de formations -->
+<!ELEMENT demandeListeFormation (form+)>
+<!ELEMENT form (id,branche)>
+<!ELEMENT branche (filliere+)>
+<!ELEMENT filliere (#PCDATA)>
+
+<!-- Reponse de listes de formations -->
+<!ELEMENT reponseListeFormation (catalogue+)>
+<!ELEMENT catalogue (id,liste)>
+<!ELEMENT liste (formation+)>
+<!ELEMENT formation (titre,description,filiere)>
+<!ELEMENT titre (#PCDATA)>
+
+<!-- Demande de stage -->
+<!ELEMENT demandeStage (dmStage+)>
+<!ELEMENT dmStage (id,objet,description,lieu,remuneration,date_de_stage)>
+<!ELEMENT date_de_stage (dateDebut, duree)>
+<!-- Nomenclature dateDebut : hh:mm:ss JJ-MM-AAAA -->
+<!ELEMENT dateDebut (#PCDATA)>
+<!-- Nomenclature duree : nombre entier : nombres de jours -->
+<!ELEMENT duree (#PCDATA)>
+
+
+<!ELEMENT objet (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT remuneration (#PCDATA)>
+
+<!-- Réponse de stage -->
+<!ELEMENT reponseStage (rpStage+)>
+<!ELEMENT rpStage (id,objet,cv,lettre)>
+<!ELEMENT cv (etatcivil,formationStage+,experience*)>
+<!ELEMENT lettre (etatcivil,description)>
+<!ELEMENT etatcivil (nom,prenom,dateNaissance,lieuNaissance,lieuResidence,photo?,email?,tel?)>
+<!ELEMENT formationStage (titre,date,lieu?,mention?,description?)>
+<!ELEMENT experience (titre,date,lieu,fonction?,description?)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT dateNaissance (#PCDATA)>
+<!ELEMENT lieuNaissance (#PCDATA)>
+<!ELEMENT lieuResidence (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT mention (#PCDATA)>
+<!ELEMENT fonction (#PCDATA)>
+
+]>
+<fichierGlobal id="ID10">
+
+<destinataire>
+EDF
+</destinataire>
+
+<expediteur>
+Entreprise
+</expediteur>
+
+<nbMessages>5</nbMessages>
+
+<message id="ID12">
+<dateEnvoi>19-11-2021</dateEnvoi>
+<dureeValidite>20</dureeValidite>
+<typeMessage>
+<demandeConference>
+<conf>
+  <id>William T. Strauss</id>
+  <sujet>COVID </sujet>
+  <lieu>Manufacture</lieu>
+  <date>3 NOVEMBRE </date>
+  <dureeConference>3h</dureeConference>
+ </conf>
+ <conf>
+  <id>David N. Bateman</id>
+  <sujet>Ecologie</sujet>
+  <lieu>Trefilerie</lieu>
+  <date>4 janvier</date>
+  <dureeConference>2h</dureeConference>
+ </conf>
+ </demandeConference>
+</typeMessage>
+</message>
+
+<message id="ID2021">
+<dateEnvoi>01-11-2021</dateEnvoi>
+<dureeValidite>30</dureeValidite>
+<typeMessage>
+<reponseConference>
+
+<reponseGenerique>
+<msg>OUI BIEN SUR</msg>
+
+<idMsgPrecedent>43</idMsgPrecedent>
+
+</reponseGenerique>
+</reponseConference>
+</typeMessage>
+</message>
+
+<message id="ID2054541">
+<dateEnvoi>01-11-2021</dateEnvoi>
+<dureeValidite>30</dureeValidite>
+<typeMessage>
+<reponseConference>
+<reponseGenerique>
+<msg></msg>
+<idMsgPrecedent></idMsgPrecedent>
+</reponseGenerique>
+</reponseConference>
+</typeMessage>
+</message>
+
+<message id="ID45">
+<dateEnvoi>19-11-2021</dateEnvoi>
+<dureeValidite>45</dureeValidite>
+<typeMessage>
+<demandeListeFormation>
+ <form>
+  <id>William T. Strauss</id>
+  <branche>
+  <filliere>Medecine</filliere>
+  </branche>
+ </form>
+ <form>
+  <id>David N. Bateman</id>
+  <branche><filliere>Informatique</filliere></branche>
+  
+ </form>
+ 
+</demandeListeFormation>
+</typeMessage>
+
+
+</message>
+
+
+<message id="ID56">
+<dateEnvoi>19-11-2021</dateEnvoi>
+<dureeValidite>45</dureeValidite>
+<typeMessage>
+<demandeStage>
+<dmStage>
+  <id>William T. Strauss</id>
+  <objet>COVID </objet>
+  <description>Manufacture</description>
+  <lieu>3 NOVEMBRE </lieu>
+  <remuneration>3h</remuneration>
+  <date_de_stage>
+    <dateDebut>31 DECEMBRE </dateDebut>
+  <duree>3 mois</duree>
+  
+  </date_de_stage>
+
+ </dmStage>
+ <dmStage>
+  <id>David N. Bateman</id>
+  <objet>Ecologie</objet>
+  <description>Trefilerie</description>
+  <lieu>4 janvier</lieu>
+  <remuneration>2h</remuneration>
+  <date_de_stage>
+    <dateDebut>3 DECEMBRE </dateDebut>
+  <duree>5 mois</duree>
+  
+  </date_de_stage>
+ 
+ </dmStage>
+
+</demandeStage>
+
+
+</typeMessage>
+
+</message>
+    
+</fichierGlobal>
